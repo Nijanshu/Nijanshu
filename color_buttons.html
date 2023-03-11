@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="doc.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="kl black" id="color"><h1>HERE is the color you want</h1></div>
+    <button class="black" onclick="black()">Black</button>
+    <button class="blue" onclick="blue()">Blue</button>
+    <button class="red" id="red" onclick="yellow()">Red</button>
+    <button class="yellow" onclick="yellow()">Yellow</button>
+    <button class="green" onclick="green()">Green</button>
+    <button onclick="change()">Go to a different site</button>
+    <img id="image" src="https://play-lh.googleusercontent.com/xSFgUDLMXo22R9PMAEcdFmEN4hI22UPsw1Vhu1pZqjO9OrbXdHtkBUxa96CqyklByQ" alt="">
+    <script>
+        let a=document.getElementById("red") 
+        a.onclick=()=>{
+            document.getElementById("color").className="red"
+        }
+        let blue=()=>{
+            document.getElementById("color").className="blue"
+        }
+        let yellow=()=>{
+            document.getElementById("color").className="yellow"
+        }
+        let green=()=>{
+            document.getElementById("color").className="green"
+        }
+        let black=()=>{
+            document.getElementById("color").className="black"
+        }
+        let change=()=>{
+            let link=prompt("Enter the desired link")
+            document.getElementById("image").className="wall"
+            window.location=link;
+        }
+        // document.getElementById("image").addEventListener("click",change())
+    </script>
+</body>
+</html>
