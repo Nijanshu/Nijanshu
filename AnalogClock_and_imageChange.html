@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tribute.css">
+    <style>.wheel {
+        /* border: 2px solid black;
+        border-radius: 50%;
+        margin-left: 50px;
+        position: absolute;
+        height: 55vw;
+        width: 55vw;
+        max-width: 500px;
+        max-height: 500px; */
+    
+        /* transition: all 3s; */
+        border: 2px solid black;
+        margin: auto;
+        position: absolute;
+        left: 50%;
+        height: 400px;
+        width: 400px;
+        border-radius: 100%;
+        /* animation: rot 60s linear 0s infinite; */
+    }
+    
+    @keyframes rot {
+        0% {
+            transform: rotate(0deg);
+        }
+    
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .line:hover {
+        /* transform: rotate(45deg); */
+        /* transform: translateX(100px); */
+    }
+    
+    .wheel:hover {
+        /* transform: scale(3); */
+        /* transform: rotate(45deg); */
+    }
+    
+    .line {
+        /* background-color: black;
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0% 0%; */
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        height: 10px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        /* transition: all 3s; */
+    
+        /* transform-origin: 0% 0%; */
+    }
+    .ctr{
+        width: 50px;
+        height: 50px;
+        background-color: brown;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        border-radius: 100%;
+    }
+    .ln{
+        position: absolute;
+        /* border: 2px solid red; */
+        width: 100%;
+        top: 50%;
+         
+    }
+    .ln:nth-of-type(1){
+        animation: rot 6s linear 0s infinite;
+    }
+    .ln:nth-of-type(2){
+        animation: rot 30s linear 0s infinite;
+    }
+    .ln:nth-of-type(2){
+        animation: rot 30s linear 0s infinite;
+    }
+    .cabin {
+        position: absolute;
+        height: 20px;
+        top: 0%;
+        left: 50%;
+        border: 2px solid red;
+        transform-origin: 50% 0%;
+    }
+    
+    .cabin:nth-of-type(6) {
+        top: -5%;
+        /* left: 50%; */
+        
+    }
+    
+    .cabin:nth-of-type(7) {
+        top: 50%;
+        left: 100%;
+    }
+    .cabin:nth-of-type(4) {
+        top: 100%;
+    }
+    .cabin:nth-of-type(5) {
+        top: 50%;
+        left: -3%;
+    }
+    #img{
+        width: 200px;
+        height: 200px;
+    }</style>
+    <title>Document</title>
+</head>
+<body>
+    <button ><div onclick="clock()" id="clock">hi</div></button>
+    <img src="Planet9_Wallpaper_5000x2813.jpg" alt="" id="img" onclick="image()">
+    <button onclick="image()">click</button>
+    <div class="wheel">
+        <div class="ln"><div class="line"></div></div>
+        <div class="ln"><div class="line"></div></div>
+        <!-- <div class="line"></div> -->
+        <span id="hr"></span>
+        <span id="min"></span>
+        <span id="sec"></span>
+        <div class="ctr"></div>
+        <div class="cabin ">12</div>
+        <div class="cabin">3</div>
+        <div class="cabin">6</div>
+        <div class="cabin">9</div>
+    </div>
+    <script>
+        let g
+       let clock=()=>{
+        document.getElementById("clock").innerHTML=Date()
+        setInterval(clock,1000)
+       }
+       let image=()=>{
+        let j=prompt("Enter an image url")
+        g=j
+        console.log(j)
+        console.log(g)
+        document.getElementById("img").src=j
+    }
+    document.getElementById("hr")=Date.getHours()
+    console.log(g)
+    </script>
+</body>
+</html>
